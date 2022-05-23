@@ -27,7 +27,7 @@ Quer saber mais? Vem acompanhar o maior grupo de moda do país!
 [LinkedIn](www.linkedin.com/company/grupo-soma)
 
 ## Proposta
-O seu desafio aqui é consumir essa [API](https://swapi.dev/) e mostrar de forma randômica uma resposta por vez referente a categoria em que estivermos ("films", "people", "planets", "species", "starships" ou "vehicles"), tudo de acordo com a URL em que o usuário estiver (Caso eu esteja na url "/peoples" o botão de mostrar informação randômica deve me mostrar um card de personagem randômico com os atributos a sua escolha ...e por ai vai ).
+O seu desafio aqui é consumir essa [API](https://swapi.dev/) ( ou [essa](https://swapi.py4e.com/) caso a primeira esteja com algum problema ) e mostrar de forma randômica uma resposta por vez referente a categoria em que estivermos ("films", "people", "planets", "species", "starships" ou "vehicles"), tudo de acordo com a URL em que o usuário estiver (Caso eu esteja na url "/peoples" o botão de mostrar informação randômica deve me mostrar um card de personagem randômico com os atributos a sua escolha ...e por ai vai ).
 
 Sobre a questão do layout, iremos deixar por sua conta! lembrando que css também é muito `!important`; e certamente será um diferencial.
 
