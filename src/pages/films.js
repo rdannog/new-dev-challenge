@@ -5,31 +5,41 @@ import * as S from "../components/styles"
 
 export default class Films extends React.Component {
   state = {
-    filmsList: []
+    allFilms:[],
+    filmsList: [],
+    randomTitle:''
   };
 
   async componentDidMount() {
     const response = await Api.data.get("/films");
     this.setState({
-      filmsList: response.data.results
+      allFilms: response.data.results
     });
-    console.log(response)
+   
   }
+  randomIndex = (a, z) => {
+    return Math.floor(Math.random() * (z - a) + a);
+  };
+    
+  handleClick = () => {
+    this.setState({
+      filmsList: this.state.allFilms.map(item => ([...item.opening_crawl])),
+      randomTitle: this.state.filmsList[this.randomIndex(0, this.state.filmsList.length)]
+
+    });
+  };
 
   render() {
-    const { filmsList } = this.state
+    const { randomTitle } = this.state
     return (
       <>
         <Header />
         <S.Title>Films</S.Title>
         <S.Container>
-          {filmsList.map((film, i) => (
-            <S.Card key={i}>
-                <h2>{film.title}</h2>
-                <h3>{film.release_date}</h3>
-                <p>{film.opening_crawl}</p>
+            <S.Card>
+                <h2>{randomTitle}</h2>
+                <button onClick={this.handleClick}>Clica ai</button>
             </S.Card>
-          ))}
         </S.Container>
         </>
     );

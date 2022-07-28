@@ -24,8 +24,8 @@ export default class Vehicle extends React.Component {
         <Header/>
         <S.Title>Vehicle</S.Title>
         <S.Container>
-        {vehicleList.map((vehicle,i)=>(
-           <S.Card key={i}>
+        {vehicleList.map((vehicle,id)=>(
+           <S.Card key={id}>
            <h2>{vehicle.name}</h2>
            <p>{vehicle.manufacturer}</p>
            <p>{vehicle.model}</p>
