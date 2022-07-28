@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
+import * as S from "./styles"
+
 
 export default class Species extends React.Component {
   state = {
@@ -20,16 +22,16 @@ export default class Species extends React.Component {
     return (
       <>
         <Header/>
-        <h1>Species</h1>
+        <S.Title>Species</S.Title>
+        <S.Container>
         {speciesList.map((specie,i)=>(
-          <>
-            <div key={i}>
-              <h2>{specie.name}</h2>
-              <h3>Language: {specie.language}</h3>
-              <p>Skin colors: {specie.skin_colors}</p>
-            </div>
-          </>
+          <S.Card key={i}>
+          <h2>{specie.name}</h2>
+          <h3>Language: {specie.language}</h3>
+          <p>Skin colors: {specie.skin_colors}</p>
+        </S.Card>
         ))}
+        </S.Container>
       </>
     );
   }

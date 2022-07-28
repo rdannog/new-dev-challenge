@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
+import * as S from "./styles"
+
 
 export default class Starships extends React.Component {
   state = {
@@ -20,16 +22,16 @@ export default class Starships extends React.Component {
     return (
       <>
         <Header/>
-        <h1>Starships</h1>
+        <S.Title>Starships</S.Title>
+        <S.Container>
         {starshipsList.map((starship, i)=>(
-          <>
-            <div key={i}>
-              <h2>{starship.name}</h2>
-              <h3>{starship.manufacturer}</h3>
-              <p>{starship.model}</p>
-            </div>
-          </>
+           <S.Card key={i}>
+           <h2>{starship.name}</h2>
+           <h3>{starship.manufacturer}</h3>
+           <p>{starship.model}</p>
+         </S.Card>
         ))}
+        </S.Container>
       </>
     );
   }

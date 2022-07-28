@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
+import * as S from "./styles"
+
 
 export default class Vehicle extends React.Component {
   state = {
@@ -20,16 +22,16 @@ export default class Vehicle extends React.Component {
     return (
       <>
         <Header/>
-        <h1>Vehicle</h1>
+        <S.Title>Vehicle</S.Title>
+        <S.Container>
         {vehicleList.map((vehicle,i)=>(
-          <>
-            <div key={i}>
-              <h2>{vehicle.name}</h2>
-              <p>{vehicle.manufacturer}</p>
-              <p>{vehicle.model}</p>
-            </div>
-          </>
+           <S.Card key={i}>
+           <h2>{vehicle.name}</h2>
+           <p>{vehicle.manufacturer}</p>
+           <p>{vehicle.model}</p>
+         </S.Card>
         ))}
+        </S.Container>
       </>
     );
   }

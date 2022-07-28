@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
+import * as S from "./styles"
 
 export default class Films extends React.Component {
   state = {
@@ -16,21 +17,21 @@ export default class Films extends React.Component {
   }
 
   render() {
-    const {filmsList} = this.state
+    const { filmsList } = this.state
     return (
       <>
-        <Header/>
-        <h1>Films</h1>
-        {filmsList.map((film, i)=>(
-          <>
-            <div key={i}>
-              <h2>{film.title}</h2>
-              <h3>{film.release_date}</h3>
-              <p>{film.opening_crawl}</p>
-            </div>
-          </>
-        ))}
-      </>
+        <Header />
+        <S.Title>Films</S.Title>
+        <S.Container>
+          {filmsList.map((film, i) => (
+            <S.Card key={i}>
+                <h2>{film.title}</h2>
+                <h3>{film.release_date}</h3>
+                <p>{film.opening_crawl}</p>
+            </S.Card>
+          ))}
+        </S.Container>
+        </>
     );
   }
 }

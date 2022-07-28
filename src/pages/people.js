@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
+import * as S from "./styles"
+
 
 export default class People extends React.Component {
   state = {
@@ -20,14 +22,16 @@ export default class People extends React.Component {
     return (
       <>
         <Header/>
-        <h1>People</h1>
+        <S.Title>People</S.Title>
+        <S.Container>
         {peopleList.map((people, i)=>(
-          <div key={i}>
+          <S.Card key={i}>
           <h2>{people.name}</h2>
           <h3>{people.birth_year}</h3>
           <p>{people.hair_color}</p>
-        </div>
+        </S.Card>
         ))}
+        </S.Container>
       </>
     );
   }

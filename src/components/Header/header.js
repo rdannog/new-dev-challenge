@@ -1,36 +1,35 @@
 import React from 'react';
-import {Link} from "gatsby"
 import * as S from "./style"
 
 export default class Header extends React.Component {
   render() {
     return (
-      <S.Container>
+      <S.Navigation>
         <S.GlobalStyle/>
-        <ul>
-            <Link to="/">
+        <S.Container>
+            <S.StyledLink to="/">
                 Home
-            </Link>
-            <Link to="/films">
+            </S.StyledLink>
+            <S.StyledLink to="/films">
                 Films
-            </Link>
-            <Link to="/people">
+            </S.StyledLink>
+            <S.StyledLink to="/people">
                 People
-            </Link>
-            <Link to="/planets">
+            </S.StyledLink>
+            <S.StyledLink to="/planets">
                 Planets
-            </Link>
-            <Link to="/species">
+            </S.StyledLink>
+            <S.StyledLink to="/species">
                 Species
-            </Link>
-            <Link to="/starships">
+            </S.StyledLink>
+            <S.StyledLink to="/starships">
                 Starships
-            </Link>
-            <Link to="/vehicle">
+            </S.StyledLink>
+            <S.StyledLink to="/vehicle">
                 Vehicle
-            </Link>
-        </ul>
-      </S.Container>
+            </S.StyledLink>
+        </S.Container>
+      </S.Navigation>
     );
   }
 }
