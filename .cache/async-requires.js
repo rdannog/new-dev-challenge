@@ -7,7 +7,6 @@ exports.components = {
   "component---src-pages-planets-js": () => import("./../../../src/pages/planets.js?export=default" /* webpackChunkName: "component---src-pages-planets-js" */),
   "component---src-pages-species-js": () => import("./../../../src/pages/species.js?export=default" /* webpackChunkName: "component---src-pages-species-js" */),
   "component---src-pages-starships-js": () => import("./../../../src/pages/starships.js?export=default" /* webpackChunkName: "component---src-pages-starships-js" */),
-  "component---src-pages-styles-js": () => import("./../../../src/pages/styles.js?export=default" /* webpackChunkName: "component---src-pages-styles-js" */),
   "component---src-pages-vehicle-js": () => import("./../../../src/pages/vehicle.js?export=default" /* webpackChunkName: "component---src-pages-vehicle-js" */)
 }
 
@@ -22,7 +21,6 @@ exports.head = {
   "component---src-pages-planets-js": () => import("./../../../src/pages/planets.js?export=head" /* webpackChunkName: "component---src-pages-planets-jshead" */),
   "component---src-pages-species-js": () => import("./../../../src/pages/species.js?export=head" /* webpackChunkName: "component---src-pages-species-jshead" */),
   "component---src-pages-starships-js": () => import("./../../../src/pages/starships.js?export=head" /* webpackChunkName: "component---src-pages-starships-jshead" */),
-  "component---src-pages-styles-js": () => import("./../../../src/pages/styles.js?export=head" /* webpackChunkName: "component---src-pages-styles-jshead" */),
   "component---src-pages-vehicle-js": () => import("./../../../src/pages/vehicle.js?export=head" /* webpackChunkName: "component---src-pages-vehicle-jshead" */)
 }
 

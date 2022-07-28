@@ -12,7 +12,6 @@ exports.components = {
   "component---src-pages-planets-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/planets.js")),
   "component---src-pages-species-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/species.js")),
   "component---src-pages-starships-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/starships.js")),
-  "component---src-pages-styles-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/styles.js")),
   "component---src-pages-vehicle-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/vehicle.js"))
 }
 

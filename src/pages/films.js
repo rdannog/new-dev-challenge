@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
-import * as S from "./styles"
+import * as S from "../components/styles"
 
 export default class Films extends React.Component {
   state = {
