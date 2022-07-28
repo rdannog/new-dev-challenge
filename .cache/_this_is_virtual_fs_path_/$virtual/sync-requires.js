@@ -4,7 +4,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/404.js")),
   "component---src-pages-films-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/films.js")),
   "component---src-pages-index-js": preferDefault(require("/home/vainaweb/Área de Trabalho/new-dev-challenge/src/pages/index.js")),
