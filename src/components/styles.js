@@ -12,6 +12,7 @@ export const HomeContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 70vh;
+    
     img{
       height: 30vh;
       margin-bottom: 3vh;
@@ -35,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     text-decoration: none;
     color: white;
+    transition:all ease-in-out 1s;
 }
 `
 export const Container= styled.div`
@@ -54,7 +56,6 @@ export const Card = styled.div`
     width: 50vw;
     height: 50vh;
     text-align: center;
-    background-color: rgba(0,0,0, 0.7);
     p{
         color: #FFE919;
         font-size: 1.5rem;
