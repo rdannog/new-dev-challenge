@@ -39,6 +39,7 @@ export default class Starships extends React.Component {
     const {random} = this.state
     return (
       <>
+        <S.GlobalStyle/>
         <Header/>
         <S.Container>
           <S.Card>

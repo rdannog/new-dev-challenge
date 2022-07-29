@@ -38,6 +38,7 @@ export default class Species extends React.Component {
     const {randomSpecie} = this.state
     return (
       <>
+        <S.GlobalStyle/>
         <Header/>
         <S.Container>
           <S.Card>

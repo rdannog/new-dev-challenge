@@ -1,6 +1,15 @@
-import styled from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 
-
+export const GlobalStyle = createGlobalStyle`
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+`
 export const Container= styled.div`
     display: flex;
     flex-direction: column;
@@ -18,6 +27,7 @@ export const Card = styled.div`
     width: 50vw;
     height: 50vh;
     text-align: center;
+    background-color: rgba(0,0,0, 0.7);
     h2{
         font-size: 2.5rem;
         margin-bottom: 7vh;
@@ -34,4 +44,5 @@ export const Button= styled.button`
     border-radius: 5%;
     font-size: 1rem;
     color:#FFE919;
+    background-color: rgba(0,0,0, 0.8);
 `

@@ -12,16 +12,19 @@ export const GlobalStyle = createGlobalStyle`
     color: white;
 }
 body{
+    background-image: url('https://wallpaperaccess.com/full/2151901.jpg');
+    background-size: cover;
     background-color: black;
+    background-blend-mode: hard-light;
 }
 `
 export const Navigation = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     height: 10vh;
-    background-color: black;
+    background-color: rgba(0,0,0, 0.7);
     border-bottom: 1px solid white;
     `
 export const Container = styled.ul`
@@ -30,7 +33,6 @@ export const Container = styled.ul`
     justify-content: space-evenly;
     width: 70%;
     height: 15vh;
-    padding-left: 10vw;
 `
 export const StyledLink = styled(Link)`
     font-size: 1.3rem;

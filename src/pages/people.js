@@ -36,6 +36,7 @@ export default class People extends React.Component {
     
     return (
       <>
+        <S.GlobalStyle/>
         <Header/>
         <S.Container>
             <S.Card>

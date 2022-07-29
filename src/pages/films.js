@@ -36,6 +36,7 @@ export default class Films extends React.Component {
     const { randomData } = this.state
     return (
       <>
+        <S.GlobalStyle/>
         <Header />
         <S.Container>
             <S.Card>

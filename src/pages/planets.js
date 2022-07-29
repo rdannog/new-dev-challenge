@@ -37,6 +37,7 @@ export default class Planets extends React.Component {
   render() {
     return (
       <>
+        <S.GlobalStyle/>
         <Header/>
         <S.Container>
           <S.Card>

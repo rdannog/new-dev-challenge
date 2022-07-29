@@ -8,10 +8,13 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 85%;
-    height: 45vh;
+    height: 50vh;
     padding-left: 10vw;
     img{
       height: 30vh;
+    }
+    h2{
+      font-size: 2rem;
     }
 `
 
@@ -23,7 +26,7 @@ export default class Home extends React.Component {
 
         <Container>
           <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png' alt=''/>
-          <h2>Get Random info from the series</h2>
+          <h2>Get Random info from swapiAPI!</h2>
         </Container>
       </>
     );

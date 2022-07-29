@@ -37,6 +37,7 @@ export default class Vehicle extends React.Component {
     const {randomVehicle} = this.state
     return (
       <>
+        <S.GlobalStyle/>
         <Header/>
         <S.Container>
         <S.Card>
