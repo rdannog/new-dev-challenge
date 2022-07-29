@@ -23,11 +23,11 @@ const Films = () => {
   const handleClick = () => {
     
 
-    const filmsList = allFilms.map(item => (
-      <>
+    const filmsList = allFilms.map((item, i) => (
+      <S.Card key={i}>
         <S.Title>{item.title}</S.Title>
         <p>{item.opening_crawl}</p>
-      </>
+      </S.Card>
       ))
 
       setRandomData(filmsList[randomIndex(0, filmsList.length)])

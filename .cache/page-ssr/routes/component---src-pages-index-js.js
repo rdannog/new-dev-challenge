@@ -2351,24 +2351,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style */ "./src/components/Header/style.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
+/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./src/components/Header/style.js");
+
 
 
 class Header extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.Navigation, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Navigation, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Star Wars Api"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("style", null, "@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "https://www.pngkey.com/png/detail/36-364173_free-icons-png-star-wars-logo-png.png"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/"
-    }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/films"
-    }, "Films"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "Films"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/people"
-    }, "People"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "People"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/planets"
-    }, "Planets"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "Planets"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/species"
-    }, "Species"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "Species"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/starships"
-    }, "Starships"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_1__.StyledLink, {
+    }, "Starships"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/vehicle"
     }, "Vehicle")));
   }
@@ -2408,6 +2414,45 @@ const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])
 
 /***/ }),
 
+/***/ "./src/components/styles.js":
+/*!**********************************!*\
+  !*** ./src/components/styles.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Button": () => (/* binding */ Button),
+/* harmony export */   "Card": () => (/* binding */ Card),
+/* harmony export */   "Container": () => (/* binding */ Container),
+/* harmony export */   "GlobalStyle": () => (/* binding */ GlobalStyle),
+/* harmony export */   "HomeContainer": () => (/* binding */ HomeContainer),
+/* harmony export */   "Title": () => (/* binding */ Title)
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fonts/SfDistantGalaxy.ttf */ "./src/fonts/SfDistantGalaxy.ttf");
+
+
+const HomeContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "styles__HomeContainer"
+})(["@font-face{font-family:\"Distant Galaxy\";src:url(", ") format(\"truetype\")}display:flex;flex-direction:column;align-items:center;justify-content:center;height:70vh;img{height:30vh;margin-bottom:3vh;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"], _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["@font-face{font-family:\"Distant Galaxy\";src:url(", ") format(\"truetype\")}*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;transition:all ease-in-out 1s;}"], _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "styles__Container"
+})(["display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:8vh;"]);
+const Card = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "styles__Card"
+})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;animation:scale-up-center 0.4s cubic-bezier(0.390,0.575,0.565,1.000) both;@keyframes scale-up-center{0%{-webkit-transform:scale(0.5);transform:scale(0.5);}100%{-webkit-transform:scale(1);transform:scale(1);}}p{color:#FFE919;font-size:1.6rem;font-family:'Anton',sans-serif;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"]);
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2.withConfig({
+  displayName: "styles__Title"
+})(["margin-bottom:7vh;"]);
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
+  displayName: "styles__Button"
+})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;color:#FFE919;background-color:rgba(0,0,0,0.8);cursor:pointer;&:active{animation:rotate-center 0.3s ease-in-out both;@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}}"]);
+
+/***/ }),
+
 /***/ "./src/pages/index.js?export=default":
 /*!*******************************************!*\
   !*** ./src/pages/index.js?export=default ***!
@@ -2417,29 +2462,24 @@ const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header/header */ "./src/components/Header/header.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fonts/SfDistantGalaxy.ttf */ "./src/fonts/SfDistantGalaxy.ttf");
+/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
 
 
 
 
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
-  displayName: "pages__Container"
-})(["@font-face{font-family:\"Distant Galaxy\";src:url(", ") format(\"truetype\")}display:flex;flex-direction:column;align-items:center;justify-content:center;height:70vh;img{height:30vh;margin-bottom:3vh;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"], _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_2__["default"]);
-class Home extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
-  render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png",
-      alt: ""
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Get Random info from swapiAPI!")));
-  }
+const Home = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_2__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_2__.HomeContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png",
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Get Random info from swapiAPI!")));
+};
 
-}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
 
 /***/ }),
 

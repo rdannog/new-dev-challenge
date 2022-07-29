@@ -8,6 +8,10 @@ export default class Header extends React.Component {
       <S.Navigation>
         <Helmet>
           <title>Star Wars Api</title>
+          <style>
+          @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');          
+          </style>
           <link rel="icon" type="image/x-icon" href="https://www.pngkey.com/png/detail/36-364173_free-icons-png-star-wars-logo-png.png"/>
         </Helmet>        
         <S.GlobalStyle/>

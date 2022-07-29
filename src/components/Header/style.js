@@ -25,7 +25,7 @@ export const Navigation = styled.nav`
     width: 100%;
     height: 10vh;
     background-color: rgba(0,0,0, 0.7);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255,255,255, 0.3);
     `
 export const Container = styled.ul`
     display: flex;
@@ -36,6 +36,7 @@ export const Container = styled.ul`
 `
 export const StyledLink = styled(Link)`
     font-size: 1.3rem;
+    font-family: 'Encode Sans', sans-serif;
     &:hover{
         cursor: pointer;
         color:#FFE919;
