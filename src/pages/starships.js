@@ -6,7 +6,8 @@ import * as S from "../components/styles"
 
 export default class Starships extends React.Component {
   state = {
-    starshipsList: []
+    starshipsList: [],
+    random:"Get a random Star Wars spaceship!"
   };
 
   async componentDidMount() {
@@ -14,22 +15,36 @@ export default class Starships extends React.Component {
     this.setState({
       starshipsList: response.data.results
     });
-    console.log(response)
   }
 
-  render() {
+  randomIndex = (a, z) => {
+    return Math.floor(Math.random() * (z - a)) + a;
+  };
+    
+  handleClick = () => {
     const {starshipsList} = this.state
+    const allStarships = starshipsList.map((starship, i)=>(
+      <S.Card key={i}>
+      <h2>{starship.name}</h2>
+      <p>{starship.manufacturer}</p>
+      <p>{starship.model}</p>
+    </S.Card>
+   ))
+    this.setState({
+      random: allStarships[this.randomIndex(0, allStarships.length)]
+    });
+  };
+
+  render() {
+    const {random} = this.state
     return (
       <>
         <Header/>
         <S.Container>
-        {starshipsList.map((starship, i)=>(
-           <S.Card key={i}>
-           <h2>{starship.name}</h2>
-           <h3>{starship.manufacturer}</h3>
-           <p>{starship.model}</p>
-         </S.Card>
-        ))}
+          <S.Card>
+            <h2>{random}</h2>
+          </S.Card>
+          <S.Button onClick={this.handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );
