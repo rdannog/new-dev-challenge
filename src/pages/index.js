@@ -7,14 +7,13 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    height: 50vh;
-    padding-left: 10vw;
+    height: 70vh;
     img{
       height: 30vh;
+      margin-bottom: 3vh;
     }
     h2{
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 `
 
