@@ -6,8 +6,7 @@ import * as S from "../components/styles"
 export default class Films extends React.Component {
   state = {
     allFilms:[],
-    filmsList: [],
-    randomTitle:''
+    randomTitle:'Get random opening crawl'
   };
 
   async componentDidMount() {
@@ -18,13 +17,13 @@ export default class Films extends React.Component {
    
   }
   randomIndex = (a, z) => {
-    return Math.floor(Math.random() * (z - a) + a);
+    return Math.floor(Math.random() * (z - a)) + a;
   };
     
   handleClick = () => {
+    const filmsList = this.state.allFilms.map(item => ([item.opening_crawl]))
     this.setState({
-      filmsList: this.state.allFilms.map(item => ([...item.opening_crawl])),
-      randomTitle: this.state.filmsList[this.randomIndex(0, this.state.filmsList.length)]
+      randomTitle: filmsList[this.randomIndex(0, filmsList.length)]
 
     });
   };

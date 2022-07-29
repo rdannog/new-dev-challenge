@@ -6159,7 +6159,7 @@ class Films extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
 
     this.handleClick = () => {
       this.setState({
-        filmsList: this.state.allFilms.map(item => [...item.title]),
+        filmsList: this.state.allFilms.map(item => [...item.opening_crawl]),
         randomTitle: this.state.filmsList[this.randomIndex(0, this.state.filmsList.length)]
       });
     };
@@ -6176,20 +6176,12 @@ class Films extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
     const {
       randomTitle
     } = this.state;
-    console.log(this.state.filmsList);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Films"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, randomTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
       onClick: this.handleClick
     }, "Clica ai"))));
   }
 
-} // randomIndex = (a, z) => {
-//   return Math.floor(Math.random() * (z - a) + a);
-// };
-// handleClick = () => {
-//   this.setState({
-//     randomTitle: this.state.filmsList[this.randomIndex(0, this.state.filmsList.length)]
-//   });
-// };
+}
 
 /***/ }),
 
