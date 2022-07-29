@@ -7,7 +7,7 @@ import * as S from "../components/styles"
 export default class People extends React.Component {
   state = {
     peopleList: [],
-    randomPeople:"Get a random Star Wars character!"
+    randomPeople:"Get a random Star Wars character info!"
   };
 
   async componentDidMount() {
