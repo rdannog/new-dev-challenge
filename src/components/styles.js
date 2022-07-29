@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
+
 
 export const Container= styled.div`
     display: flex;
@@ -15,12 +15,11 @@ export const Card = styled.div`
     justify-content: space-evenly;
     padding:6vh 2vw;
     margin: 16px;
-    width: 45%;
+    width: 50vw;
     height: 50vh;
-    border-radius: 25px;
     text-align: center;
     h2{
-        margin-bottom: 3vh;
+        margin-bottom: 7vh;
     }
 `
 export const Button= styled.button`

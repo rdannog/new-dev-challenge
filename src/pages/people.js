@@ -6,7 +6,8 @@ import * as S from "../components/styles"
 
 export default class People extends React.Component {
   state = {
-    peopleList: []
+    peopleList: [],
+    randomPeople:"Get a random Star Wars character!"
   };
 
   async componentDidMount() {
@@ -14,22 +15,33 @@ export default class People extends React.Component {
     this.setState({
       peopleList: response.data.results
     });
-    console.log(response)
   }
+  randomIndex = (a, z) => {
+    return Math.floor(Math.random() * (z - a)) + a;
+  };
+    
+  handleClick = () => {
+    const {peopleList} = this.state
+    const allPeople = peopleList.map((people, i)=>(
+      <S.Card key={i}>
+      <p>{people.name} was born on year {people.birth_year} and has {people.hair_color} hair color</p>
+    </S.Card>
+    ))
+    this.setState({
+      randomPeople: allPeople[this.randomIndex(0, allPeople.length)]
+    });
+  };
 
   render() {
-    const {peopleList} = this.state
+    
     return (
       <>
         <Header/>
         <S.Container>
-        {peopleList.map((people, i)=>(
-          <S.Card key={i}>
-          <h2>{people.name}</h2>
-          <h3>{people.birth_year}</h3>
-          <p>{people.hair_color}</p>
-        </S.Card>
-        ))}
+            <S.Card>
+              <h2>{this.state.randomPeople}</h2>
+            </S.Card>
+            <S.Button onClick={this.handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );

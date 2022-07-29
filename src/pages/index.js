@@ -7,12 +7,11 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 85%;
     height: 45vh;
     padding-left: 10vw;
-    h1{
-      font-size: 3em;
-      margin-bottom: 4vh;
+    img{
+      height: 30vh;
     }
 `
 
@@ -23,7 +22,7 @@ export default class Home extends React.Component {
         <Header/>
 
         <Container>
-          <h1>Star Wars Api</h1>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png' alt=''/>
           <h2>Get Random info from the series</h2>
         </Container>
       </>

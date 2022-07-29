@@ -34,7 +34,6 @@ export const Container = styled.ul`
 `
 export const StyledLink = styled(Link)`
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
     &:hover{
         cursor: pointer;
         color:darkgoldenrod;
