@@ -9,7 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    cursor: default;
     color: white;
 }
 body{
@@ -19,21 +18,22 @@ body{
 export const Navigation = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color: black;
     border-bottom: 1px solid white;
-`
+    `
 export const Container = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 70%;
     height: 15vh;
+    padding-left: 10vw;
 `
 export const StyledLink = styled(Link)`
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     &:hover{
         cursor: pointer;

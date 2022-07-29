@@ -6,7 +6,7 @@ export const Container= styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 7vh;
+    margin-top: 2vh;
 `
 export const Card = styled.div`
     display: flex;
@@ -31,7 +31,8 @@ export const Button= styled.button`
 export const HomeButton= styled(Link)`
     padding: 15px 50px;
     background-color: transparent;
-    border: solid 3px white;
+    border: transparent;
     border-radius: 5%;
     font-size: 1em;
+    align-self: start;
 `
