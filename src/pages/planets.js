@@ -22,8 +22,8 @@ export default class Planets extends React.Component {
     return (
       <>
         <Header/>
-        <S.Title>Planets</S.Title>
         <S.Container>
+        <S.HomeButton to="/">Go Home!</S.HomeButton>        
         {planetsList.map((planet,i)=>(
          <S.Card key={i}>
          <h2>{planet.name}</h2>

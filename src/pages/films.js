@@ -6,7 +6,7 @@ import * as S from "../components/styles"
 export default class Films extends React.Component {
   state = {
     allFilms:[],
-    randomTitle:'Get random opening crawl'
+    randomData:'Get a random Star Wars film opening!'
   };
 
   async componentDidMount() {
@@ -21,24 +21,28 @@ export default class Films extends React.Component {
   };
     
   handleClick = () => {
-    const filmsList = this.state.allFilms.map(item => ([item.opening_crawl]))
+    const filmsList = this.state.allFilms.map(item => (
+      <>
+        <h2>{item.title}</h2>
+        <p>{item.opening_crawl}</p>
+      </>
+      ))
     this.setState({
-      randomTitle: filmsList[this.randomIndex(0, filmsList.length)]
-
+      randomData: filmsList[this.randomIndex(0, filmsList.length)]
     });
   };
 
   render() {
-    const { randomTitle } = this.state
+    const { randomData } = this.state
     return (
       <>
         <Header />
-        <S.Title>Films</S.Title>
         <S.Container>
+            <S.HomeButton to="/">Go Home!</S.HomeButton>
             <S.Card>
-                <h2>{randomTitle}</h2>
-                <button onClick={this.handleClick}>Clica ai</button>
+                <h2>{randomData}</h2>
             </S.Card>
+            <S.Button onClick={this.handleClick}>Randomize</S.Button>
         </S.Container>
         </>
     );
