@@ -33,9 +33,9 @@ export const Container = styled.ul`
     padding-left: 10vw;
 `
 export const StyledLink = styled(Link)`
-    font-size: 1.2em;
+    font-size: 1.3rem;
     &:hover{
         cursor: pointer;
-        color:darkgoldenrod;
+        color:#FFE919;
     }
 `

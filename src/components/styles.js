@@ -19,7 +19,12 @@ export const Card = styled.div`
     height: 50vh;
     text-align: center;
     h2{
+        font-size: 2.5rem;
         margin-bottom: 7vh;
+    }
+    p{
+        color: #FFE919;
+        font-size: 1.5rem;
     }
 `
 export const Button= styled.button`
@@ -27,5 +32,6 @@ export const Button= styled.button`
     background-color: transparent;
     border: solid 3px white;
     border-radius: 5%;
-    font-size: 1em;
+    font-size: 1rem;
+    color:#FFE919;
 `

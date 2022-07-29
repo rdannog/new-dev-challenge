@@ -6,7 +6,8 @@ import * as S from "../components/styles"
 
 export default class Planets extends React.Component {
   state = {
-    planetsList: []
+    planetsList: [],
+    randomPlanet:"Get a random Star Wars planet!"
   };
 
   async componentDidMount() {
@@ -14,22 +15,34 @@ export default class Planets extends React.Component {
     this.setState({
       planetsList: response.data.results
     });
-    console.log(response)
   }
+  randomIndex = (a, z) => {
+    return Math.floor(Math.random() * (z - a)) + a;
+  };
+    
+  handleClick = () => {
+    const {planetsList} = this.state
+    const allPlanets = planetsList.map((planet,i)=>(
+      <S.Card key={i}>
+        <h2>{planet.name}</h2>
+        <p>Population: {planet.population}</p>
+        <p>Climate: {planet.climate}</p>
+      </S.Card>
+     ))
+    this.setState({
+      randomPlanet: allPlanets[this.randomIndex(0, allPlanets.length)]
+    });
+  };
 
   render() {
-    const {planetsList} = this.state
     return (
       <>
         <Header/>
         <S.Container>
-        {planetsList.map((planet,i)=>(
-         <S.Card key={i}>
-         <h2>{planet.name}</h2>
-         <p>Population: {planet.population}</p>
-         <p>Climate: {planet.climate}</p>
-       </S.Card>
-        ))}
+          <S.Card>
+            <h2>{this.state.randomPlanet}</h2>
+          </S.Card>
+          <S.Button onClick={this.handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );

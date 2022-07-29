@@ -26,7 +26,7 @@ export default class Species extends React.Component {
         {speciesList.map((specie,i)=>(
           <S.Card key={i}>
           <h2>{specie.name}</h2>
-          <h3>Language: {specie.language}</h3>
+          <p>Language: {specie.language}</p>
           <p>Skin colors: {specie.skin_colors}</p>
         </S.Card>
         ))}
