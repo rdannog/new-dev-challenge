@@ -23,7 +23,6 @@ export default class People extends React.Component {
       <>
         <Header/>
         <S.Container>
-        <S.HomeButton to="/">Go Home!</S.HomeButton>
         {peopleList.map((people, i)=>(
           <S.Card key={i}>
           <h2>{people.name}</h2>

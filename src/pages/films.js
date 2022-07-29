@@ -38,7 +38,6 @@ export default class Films extends React.Component {
       <>
         <Header />
         <S.Container>
-            <S.HomeButton to="/">Go Home!</S.HomeButton>
             <S.Card>
                 <h2>{randomData}</h2>
             </S.Card>

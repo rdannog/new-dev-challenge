@@ -23,7 +23,6 @@ export default class Species extends React.Component {
       <>
         <Header/>
         <S.Container>
-        <S.HomeButton to="/">Go Home!</S.HomeButton>
         {speciesList.map((specie,i)=>(
           <S.Card key={i}>
           <h2>{specie.name}</h2>

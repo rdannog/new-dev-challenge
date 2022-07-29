@@ -23,7 +23,6 @@ export default class Vehicle extends React.Component {
       <>
         <Header/>
         <S.Container>
-        <S.HomeButton to="/">Go Home!</S.HomeButton>
         {vehicleList.map((vehicle,id)=>(
            <S.Card key={id}>
            <h2>{vehicle.name}</h2>

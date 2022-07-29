@@ -23,7 +23,6 @@ export default class Starships extends React.Component {
       <>
         <Header/>
         <S.Container>
-        <S.HomeButton to="/">Go Home!</S.HomeButton>
         {starshipsList.map((starship, i)=>(
            <S.Card key={i}>
            <h2>{starship.name}</h2>
