@@ -1,8 +1,14 @@
 import React from 'react';
 import Header from '../components/Header/header';
 import styled from 'styled-components';
+import Font from "../fonts/SfDistantGalaxy.ttf"
+
 
 const Container = styled.div`
+    @font-face {
+      font-family: "Distant Galaxy";
+      src: url(${Font}) format("truetype")
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +20,7 @@ const Container = styled.div`
     }
     h2{
       font-size: 2.5rem;
+      font-family: "Distant Galaxy";
     }
 `
 

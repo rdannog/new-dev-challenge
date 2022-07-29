@@ -24,7 +24,7 @@ export default class Vehicle extends React.Component {
     const {vehicleList} = this.state
     const allVehicle = vehicleList.map((vehicle, i)=>(
       <S.Card key={i}>
-      <h2>{vehicle.name}</h2>
+      <S.Title>{vehicle.name}</S.Title>
       <p><strong>Manufacturer:</strong> {vehicle.manufacturer}</p>
       <p><strong>Model: </strong> {vehicle.model}</p>
     </S.Card>

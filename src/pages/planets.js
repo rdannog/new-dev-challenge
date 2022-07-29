@@ -24,7 +24,7 @@ export default class Planets extends React.Component {
     const {planetsList} = this.state
     const allPlanets = planetsList.map((planet,i)=>(
       <S.Card key={i}>
-        <h2>{planet.name}</h2>
+        <S.Title>{planet.name}</S.Title>
         <p>Population: {planet.population}</p>
         <p>Climate: {planet.climate}</p>
       </S.Card>

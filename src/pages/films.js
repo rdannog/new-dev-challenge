@@ -23,7 +23,7 @@ export default class Films extends React.Component {
   handleClick = () => {
     const filmsList = this.state.allFilms.map(item => (
       <>
-        <h2>{item.title}</h2>
+        <S.Title>{item.title}</S.Title>
         <p>{item.opening_crawl}</p>
       </>
       ))

@@ -25,7 +25,7 @@ export default class Starships extends React.Component {
     const {starshipsList} = this.state
     const allStarships = starshipsList.map((starship, i)=>(
       <S.Card key={i}>
-      <h2>{starship.name}</h2>
+      <S.Title>{starship.name}</S.Title>
       <p>{starship.manufacturer}</p>
       <p>{starship.model}</p>
     </S.Card>

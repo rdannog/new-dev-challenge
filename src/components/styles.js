@@ -1,6 +1,11 @@
 import styled, {createGlobalStyle} from "styled-components";
+import Font from "../fonts/SfDistantGalaxy.ttf"
 
 export const GlobalStyle = createGlobalStyle`
+ @font-face {
+        font-family: "Distant Galaxy";
+        src: url(${Font}) format("truetype")
+        }
 *{
     margin: 0;
     padding: 0;
@@ -28,14 +33,16 @@ export const Card = styled.div`
     height: 50vh;
     text-align: center;
     background-color: rgba(0,0,0, 0.7);
-    h2{
-        font-size: 2.5rem;
-        margin-bottom: 7vh;
-    }
     p{
         color: #FFE919;
         font-size: 1.5rem;
     }
+    
+`
+export const Title = styled.h2`
+    font-size: 2.5rem;
+    font-family: "Distant Galaxy";
+    margin-bottom: 7vh;
 `
 export const Button= styled.button`
     padding: 15px 50px;
