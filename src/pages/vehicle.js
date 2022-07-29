@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
 import * as S from "../components/styles"
 
 
-export default class Vehicle extends React.Component {
-  state = {
-    vehicleList: [],
-    randomVehicle:"Get random Star Wars vehicle info!"
-  };
+const Vehicle = () => {
+  const [vehicleList, setVehicleList] = useState([])
+  const [randomVehicle, setRandomVehicle] = useState(<h2>Get random Star Wars vehicle info!</h2>)
+  const [error, setError] = useState(false)
 
-  async componentDidMount() {
-    const response = await Api.data.get("/vehicles");
-    this.setState({
-      vehicleList: response.data.results
-    });
-  }
-  randomIndex = (a, z) => {
+  useEffect(() => {
+    Api.data.get("/vehicles").then((response) => {
+      setVehicleList(response.data.results)
+    }).catch(
+      setError(true)
+    )
+  }, []);
+
+  const randomIndex = (a, z) => {
     return Math.floor(Math.random() * (z - a)) + a;
   };
     
-  handleClick = () => {
-    const {vehicleList} = this.state
+  const handleClick = () => {
     const allVehicle = vehicleList.map((vehicle, i)=>(
       <S.Card key={i}>
       <S.Title>{vehicle.name}</S.Title>
@@ -29,23 +29,24 @@ export default class Vehicle extends React.Component {
       <p><strong>Model: </strong> {vehicle.model}</p>
     </S.Card>
    ))
-    this.setState({
-      randomVehicle: allVehicle[this.randomIndex(0, allVehicle.length)]
-    });
+    setRandomVehicle(allVehicle[randomIndex(0, allVehicle.length)]
+    );
   };
-  render() {
-    const {randomVehicle} = this.state
+
     return (
       <>
         <S.GlobalStyle/>
         <Header/>
         <S.Container>
-        <S.Card>
-            <h2>{randomVehicle}</h2>
+        {error ? (
+          <S.Card>
+            {randomVehicle}
           </S.Card>
-          <S.Button onClick={this.handleClick}>Randomize</S.Button>
+          ): <h2>Loading info</h2>
+        }
+          <S.Button onClick={handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );
   }
-}
+export default Vehicle

@@ -6084,13 +6084,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
-const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-color:black;}"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-image:url('https://wallpaperaccess.com/full/2151901.jpg');background-size:cover;background-color:black;background-blend-mode:hard-light;}"]);
 const Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "style__Navigation"
-})(["display:flex;align-items:center;justify-content:flex-start;width:100%;height:10vh;background-color:black;border-bottom:1px solid white;"]);
+})(["display:flex;align-items:center;justify-content:center;width:100%;height:10vh;background-color:rgba(0,0,0,0.7);border-bottom:1px solid white;"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "style__Container"
-})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;padding-left:10vw;"]);
+})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;"]);
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link).withConfig({
   displayName: "style__StyledLink"
 })(["font-size:1.3rem;&:hover{cursor:pointer;color:#FFE919;}"]);
@@ -6108,19 +6108,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Button": () => (/* binding */ Button),
 /* harmony export */   "Card": () => (/* binding */ Card),
-/* harmony export */   "Container": () => (/* binding */ Container)
+/* harmony export */   "Container": () => (/* binding */ Container),
+/* harmony export */   "GlobalStyle": () => (/* binding */ GlobalStyle),
+/* harmony export */   "Title": () => (/* binding */ Title)
 /* harmony export */ });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fonts/SfDistantGalaxy.ttf */ "./src/fonts/SfDistantGalaxy.ttf");
 
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["@font-face{font-family:\"Distant Galaxy\";src:url(", ") format(\"truetype\")}*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}"], _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "styles__Container"
 })(["display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:8vh;"]);
-const Card = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+const Card = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "styles__Card"
-})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;h2{font-size:2.5rem;margin-bottom:7vh;}p{color:#FFE919;font-size:1.5rem;}"]);
-const Button = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
+})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;background-color:rgba(0,0,0,0.7);p{color:#FFE919;font-size:1.5rem;}"]);
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2.withConfig({
+  displayName: "styles__Title"
+})(["font-size:2.5rem;font-family:\"Distant Galaxy\";margin-bottom:7vh;"]);
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "styles__Button"
-})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;color:#FFE919;"]);
+})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;color:#FFE919;background-color:rgba(0,0,0,0.8);"]);
 
 /***/ }),
 
@@ -6149,7 +6157,7 @@ class People extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
     super(...args);
     this.state = {
       peopleList: [],
-      randomPeople: "Get a random Star Wars character info!"
+      randomPeople: "Get random Star Wars character info!"
     };
 
     this.randomIndex = (a, z) => {
@@ -6177,7 +6185,7 @@ class People extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   }
 
   render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, this.state.randomPeople)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Button, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, this.state.randomPeople)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Button, {
       onClick: this.handleClick
     }, "Randomize")));
   }
@@ -7438,6 +7446,21 @@ module.exports = {
 	stderr: getSupportLevel(process.stderr)
 };
 
+
+/***/ }),
+
+/***/ "./src/fonts/SfDistantGalaxy.ttf":
+/*!***************************************!*\
+  !*** ./src/fonts/SfDistantGalaxy.ttf ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/SfDistantGalaxy-09f40f67e6fb88ac476a3c9105c40ed9.ttf");
 
 /***/ }),
 

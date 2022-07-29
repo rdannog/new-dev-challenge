@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
 import * as S from "../components/styles"
 
 
-export default class Planets extends React.Component {
-  state = {
-    planetsList: [],
-    randomPlanet:"Get random Star Wars planet!"
-  };
+const Planets = () => {
+  const [planetsList, setPlanetsList] = useState([])
+  const [randomPlanet, setRandomPlanet] = useState(<h2>Get random Star Wars planets info!</h2>)
+  const [error, setError] = useState(false)
 
-  async componentDidMount() {
-    const response = await Api.data.get("/planets");
-    this.setState({
-      planetsList: response.data.results
-    });
-  }
-  randomIndex = (a, z) => {
+  useEffect(() => {
+    Api.data.get("/planets").then((response) => {
+      setPlanetsList(response.data.results)
+    }).catch(
+      setError(true)
+    )
+  }, []);
+  const randomIndex = (a, z) => {
     return Math.floor(Math.random() * (z - a)) + a;
   };
     
-  handleClick = () => {
-    const {planetsList} = this.state
+  const handleClick = () => {
     const allPlanets = planetsList.map((planet,i)=>(
       <S.Card key={i}>
         <S.Title>{planet.name}</S.Title>
@@ -29,23 +28,24 @@ export default class Planets extends React.Component {
         <p>Climate: {planet.climate}</p>
       </S.Card>
      ))
-    this.setState({
-      randomPlanet: allPlanets[this.randomIndex(0, allPlanets.length)]
-    });
+    setRandomPlanet(allPlanets[randomIndex(0, allPlanets.length)]);
   };
 
-  render() {
-    return (
-      <>
-        <S.GlobalStyle/>
-        <Header/>
-        <S.Container>
-          <S.Card>
-            <h2>{this.state.randomPlanet}</h2>
+  return (
+    <>
+      <S.GlobalStyle/>
+      <Header/>
+      <S.Container>
+      {error ? (
+            <S.Card>
+            {randomPlanet}
           </S.Card>
-          <S.Button onClick={this.handleClick}>Randomize</S.Button>
-        </S.Container>
-      </>
-    );
-  }
+          ): <h2>Get random Star Wars planets info!</h2>
+          }
+        <S.Button onClick={handleClick}>Randomize</S.Button>
+      </S.Container>
+    </>
+  );
 }
+
+export default Planets

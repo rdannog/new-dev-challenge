@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
 import * as S from "../components/styles"
 
 
-export default class Starships extends React.Component {
-  state = {
-    starshipsList: [],
-    random:"Get random Star Wars spaceships info!"
-  };
+const Starships = () => {
+  const [starshipsList, setStarshipsList] = useState([])
+  const [random, setRandom] = useState(<h2>Get random Star Wars starships info!</h2>)
+  const [error, setError] = useState(false)
 
-  async componentDidMount() {
-    const response = await Api.data.get("/starships");
-    this.setState({
-      starshipsList: response.data.results
-    });
-  }
+  useEffect(() => {
+    Api.data.get("/starships").then((response) => {
+      setStarshipsList(response.data.results)
+    }).catch(
+      setError(true)
+    )
+  }, []);
 
-  randomIndex = (a, z) => {
+  const randomIndex = (a, z) => {
     return Math.floor(Math.random() * (z - a)) + a;
   };
     
-  handleClick = () => {
-    const {starshipsList} = this.state
+  const handleClick = () => {
     const allStarships = starshipsList.map((starship, i)=>(
       <S.Card key={i}>
       <S.Title>{starship.name}</S.Title>
@@ -30,24 +29,24 @@ export default class Starships extends React.Component {
       <p>{starship.model}</p>
     </S.Card>
    ))
-    this.setState({
-      random: allStarships[this.randomIndex(0, allStarships.length)]
-    });
+    setRandom(allStarships[randomIndex(0, allStarships.length)]
+    );
   };
 
-  render() {
-    const {random} = this.state
     return (
       <>
         <S.GlobalStyle/>
         <Header/>
         <S.Container>
-          <S.Card>
-            <h2>{random}</h2>
+        {error ? (
+            <S.Card>
+            {random}
           </S.Card>
-          <S.Button onClick={this.handleClick}>Randomize</S.Button>
+          ): <h2>Get random Star Wars starships info!</h2>
+          }
+          <S.Button onClick={handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );
   }
-}
+export default Starships

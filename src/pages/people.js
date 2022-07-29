@@ -1,50 +1,49 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
 import * as S from "../components/styles"
 
 
-export default class People extends React.Component {
-  state = {
-    peopleList: [],
-    randomPeople:"Get random Star Wars character info!"
-  };
+const People = () => {
+  const [peopleList, setPeopleList] = useState([])
+  const [randomPeople, setRandomPeople] = useState(<h2>Get random Star Wars  character info!</h2>)
+  const [error, setError] = useState(false)
 
-  async componentDidMount() {
-    const response = await Api.data.get("/people");
-    this.setState({
-      peopleList: response.data.results
-    });
-  }
-  randomIndex = (a, z) => {
+  useEffect(() => {
+    Api.data.get("/people").then((response) => {
+      setPeopleList(response.data.results)
+    }).catch(
+      setError(true)
+    )
+  }, []);
+
+  const randomIndex = (a, z) => {
     return Math.floor(Math.random() * (z - a)) + a;
   };
     
-  handleClick = () => {
-    const {peopleList} = this.state
+  const handleClick = () => {
     const allPeople = peopleList.map((people, i)=>(
       <S.Card key={i}>
       <p>{people.name} was born on year {people.birth_year} and has {people.hair_color} hair color</p>
     </S.Card>
     ))
-    this.setState({
-      randomPeople: allPeople[this.randomIndex(0, allPeople.length)]
-    });
+    setRandomPeople(allPeople[randomIndex(0, allPeople.length)])
   };
 
-  render() {
-    
     return (
       <>
         <S.GlobalStyle/>
         <Header/>
         <S.Container>
+        {error ? (
             <S.Card>
-              <h2>{this.state.randomPeople}</h2>
-            </S.Card>
-            <S.Button onClick={this.handleClick}>Randomize</S.Button>
+            {randomPeople}
+          </S.Card>
+          ): <h2>Get random Star Wars character info!</h2>
+          }
+            <S.Button onClick={handleClick}>Randomize</S.Button>
         </S.Container>
       </>
     );
-  }
 }
+export default People

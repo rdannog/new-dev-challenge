@@ -1,6 +1,28 @@
 import styled, {createGlobalStyle} from "styled-components";
 import Font from "../fonts/SfDistantGalaxy.ttf"
 
+
+export const HomeContainer = styled.div`
+    @font-face {
+      font-family: "Distant Galaxy";
+      src: url(${Font}) format("truetype")
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    img{
+      height: 30vh;
+      margin-bottom: 3vh;
+    }
+    h2{
+      font-size: 2.5rem;
+      font-family: "Distant Galaxy";
+    }
+`
+
+
 export const GlobalStyle = createGlobalStyle`
  @font-face {
         font-family: "Distant Galaxy";
@@ -37,11 +59,13 @@ export const Card = styled.div`
         color: #FFE919;
         font-size: 1.5rem;
     }
+    h2{
+        font-size: 2.5rem;
+        font-family: "Distant Galaxy";
+    }
     
 `
 export const Title = styled.h2`
-    font-size: 2.5rem;
-    font-family: "Distant Galaxy";
     margin-bottom: 7vh;
 `
 export const Button= styled.button`
@@ -52,4 +76,5 @@ export const Button= styled.button`
     font-size: 1rem;
     color:#FFE919;
     background-color: rgba(0,0,0, 0.8);
+    cursor:pointer;
 `

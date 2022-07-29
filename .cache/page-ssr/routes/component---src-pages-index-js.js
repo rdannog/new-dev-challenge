@@ -2395,13 +2395,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
-const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-color:black;}"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-image:url('https://wallpaperaccess.com/full/2151901.jpg');background-size:cover;background-color:black;background-blend-mode:hard-light;}"]);
 const Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "style__Navigation"
-})(["display:flex;align-items:center;justify-content:flex-start;width:100%;height:10vh;background-color:black;border-bottom:1px solid white;"]);
+})(["display:flex;align-items:center;justify-content:center;width:100%;height:10vh;background-color:rgba(0,0,0,0.7);border-bottom:1px solid white;"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "style__Container"
-})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;padding-left:10vw;"]);
+})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;"]);
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link).withConfig({
   displayName: "style__StyledLink"
 })(["font-size:1.3rem;&:hover{cursor:pointer;color:#FFE919;}"]);
@@ -2422,19 +2422,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header/header */ "./src/components/Header/header.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fonts/SfDistantGalaxy.ttf */ "./src/fonts/SfDistantGalaxy.ttf");
 
 
 
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "pages__Container"
-})(["display:flex;flex-direction:column;align-items:center;justify-content:center;width:85%;height:45vh;padding-left:10vw;img{height:30vh;}"]);
+})(["@font-face{font-family:\"Distant Galaxy\";src:url(", ") format(\"truetype\")}display:flex;flex-direction:column;align-items:center;justify-content:center;height:70vh;img{height:30vh;margin-bottom:3vh;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"], _fonts_SfDistantGalaxy_ttf__WEBPACK_IMPORTED_MODULE_2__["default"]);
 class Home extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png",
       alt: ""
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Get Random info from the series")));
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Get Random info from swapiAPI!")));
   }
 
 }
@@ -3340,6 +3342,21 @@ function mitt(all                 ) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mitt);
 //# sourceMappingURL=mitt.es.js.map
 
+
+/***/ }),
+
+/***/ "./src/fonts/SfDistantGalaxy.ttf":
+/*!***************************************!*\
+  !*** ./src/fonts/SfDistantGalaxy.ttf ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/SfDistantGalaxy-09f40f67e6fb88ac476a3c9105c40ed9.ttf");
 
 /***/ }),
 

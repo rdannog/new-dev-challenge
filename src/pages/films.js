@@ -1,50 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as Api from "../services/api"
 import Header from '../components/Header/header';
 import * as S from "../components/styles"
 
-export default class Films extends React.Component {
-  state = {
-    allFilms:[],
-    randomData:'Get random Star Wars film opening!'
-  };
+const Films = () => {
+  const [allFilms, setAllFilms] = useState([])
+  const [randomData, setRandomData] = useState(<h2>Get random Star Wars film opening!</h2>)
+  const [error, setError] = useState(false)
 
-  async componentDidMount() {
-    const response = await Api.data.get("/films");
-    this.setState({
-      allFilms: response.data.results
-    });
-   
-  }
-  randomIndex = (a, z) => {
+  useEffect(() => {
+    Api.data.get("/films").then((response) => {
+      setAllFilms(response.data.results)
+    }).catch(
+      setError(true)
+    )
+  }, []);
+
+  const randomIndex = (a, z) => {
     return Math.floor(Math.random() * (z - a)) + a;
   };
     
-  handleClick = () => {
-    const filmsList = this.state.allFilms.map(item => (
+  const handleClick = () => {
+    
+
+    const filmsList = allFilms.map(item => (
       <>
         <S.Title>{item.title}</S.Title>
         <p>{item.opening_crawl}</p>
       </>
       ))
-    this.setState({
-      randomData: filmsList[this.randomIndex(0, filmsList.length)]
-    });
+
+      setRandomData(filmsList[randomIndex(0, filmsList.length)])
   };
 
-  render() {
-    const { randomData } = this.state
     return (
       <>
         <S.GlobalStyle/>
         <Header />
         <S.Container>
+          {error ? (
             <S.Card>
-                <h2>{randomData}</h2>
-            </S.Card>
-            <S.Button onClick={this.handleClick}>Randomize</S.Button>
+            {randomData}
+          </S.Card>
+          ): <h2>Get random Star Wars film opening!</h2>
+          }
+          <S.Button onClick={handleClick}>Randomize</S.Button>
         </S.Container>
         </>
     );
-  }
 }
+
+export default Films
