@@ -7,7 +7,7 @@ import * as S from "../components/styles"
 export default class Starships extends React.Component {
   state = {
     starshipsList: [],
-    random:"Get a random Star Wars spaceship!"
+    random:"Get random Star Wars spaceships info!"
   };
 
   async componentDidMount() {

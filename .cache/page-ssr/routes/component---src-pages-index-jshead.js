@@ -2395,16 +2395,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
-const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;cursor:default;color:white;}body{background-color:black;}"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-color:black;}"]);
 const Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "style__Navigation"
-})(["display:flex;align-items:center;justify-content:center;width:100%;height:15vh;background-color:black;border-bottom:1px solid white;"]);
+})(["display:flex;align-items:center;justify-content:flex-start;width:100%;height:10vh;background-color:black;border-bottom:1px solid white;"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "style__Container"
-})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;"]);
+})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;padding-left:10vw;"]);
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link).withConfig({
   displayName: "style__StyledLink"
-})(["font-size:1.5em;font-family:Arial,Helvetica,sans-serif;&:hover{cursor:pointer;color:darkgoldenrod;}"]);
+})(["font-size:1.3rem;&:hover{cursor:pointer;color:#FFE919;}"]);
 
 /***/ }),
 
@@ -2422,11 +2422,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header/header */ "./src/components/Header/header.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 
 
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "pages__Container"
+})(["display:flex;flex-direction:column;align-items:center;justify-content:center;width:85%;height:45vh;padding-left:10vw;img{height:30vh;}"]);
 class Home extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png",
+      alt: ""
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Get Random info from the series")));
   }
 
 }

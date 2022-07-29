@@ -6084,16 +6084,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
-const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;cursor:default;color:white;}body{background-color:black;}"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-color:black;}"]);
 const Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "style__Navigation"
-})(["display:flex;align-items:center;justify-content:center;width:100%;height:15vh;background-color:black;border-bottom:1px solid white;"]);
+})(["display:flex;align-items:center;justify-content:flex-start;width:100%;height:10vh;background-color:black;border-bottom:1px solid white;"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "style__Container"
-})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;"]);
+})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;padding-left:10vw;"]);
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link).withConfig({
   displayName: "style__StyledLink"
-})(["font-size:1.5em;font-family:Arial,Helvetica,sans-serif;&:hover{cursor:pointer;color:darkgoldenrod;}"]);
+})(["font-size:1.3rem;&:hover{cursor:pointer;color:#FFE919;}"]);
 
 /***/ }),
 
@@ -6106,21 +6106,21 @@ const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Button": () => (/* binding */ Button),
 /* harmony export */   "Card": () => (/* binding */ Card),
-/* harmony export */   "Container": () => (/* binding */ Container),
-/* harmony export */   "Title": () => (/* binding */ Title)
+/* harmony export */   "Container": () => (/* binding */ Container)
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h1.withConfig({
-  displayName: "styles__Title"
-})(["margin:1.5em;text-align:center;"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__Container"
-})(["display:flex;flex-direction:column;align-items:center;justify-content:center;"]);
+})(["display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:8vh;"]);
 const Card = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__Card"
-})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:45%;border:1px solid white;border-radius:25px;"]);
+})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;h2{font-size:2.5rem;margin-bottom:7vh;}p{color:#FFE919;font-size:1.5rem;}"]);
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
+  displayName: "styles__Button"
+})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;color:#FFE919;"]);
 
 /***/ }),
 
@@ -6148,7 +6148,24 @@ class Species extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   constructor(...args) {
     super(...args);
     this.state = {
-      speciesList: []
+      speciesList: [],
+      randomSpecie: "Get a random Star Wars specie!"
+    };
+
+    this.randomIndex = (a, z) => {
+      return Math.floor(Math.random() * (z - a)) + a;
+    };
+
+    this.handleClick = () => {
+      const {
+        speciesList
+      } = this.state;
+      const allSpecies = speciesList.map((specie, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, {
+        key: i
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, specie.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Language: ", specie.language), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Skin colors: ", specie.skin_colors)));
+      this.setState({
+        randomSpecie: allSpecies[this.randomIndex(0, allSpecies.length)]
+      });
     };
   }
 
@@ -6157,16 +6174,15 @@ class Species extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
     this.setState({
       speciesList: response.data.results
     });
-    console.log(response);
   }
 
   render() {
     const {
-      speciesList
+      randomSpecie
     } = this.state;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Species"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Container, null, speciesList.map((specie, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, {
-      key: i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, specie.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Language: ", specie.language), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Skin colors: ", specie.skin_colors)))));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, randomSpecie)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Button, {
+      onClick: this.handleClick
+    }, "Randomize")));
   }
 
 }

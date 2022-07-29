@@ -7,7 +7,7 @@ import * as S from "../components/styles"
 export default class Planets extends React.Component {
   state = {
     planetsList: [],
-    randomPlanet:"Get a random Star Wars planet!"
+    randomPlanet:"Get random Star Wars planet!"
   };
 
   async componentDidMount() {

@@ -7,7 +7,7 @@ import * as S from "../components/styles"
 export default class Species extends React.Component {
   state = {
     speciesList: [],
-    randomSpecie:"Get a random Star Wars specie!"
+    randomSpecie:"Get random Star Wars specie!"
   };
 
   async componentDidMount() {

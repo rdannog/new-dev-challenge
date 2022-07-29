@@ -6,7 +6,7 @@ import * as S from "../components/styles"
 export default class Films extends React.Component {
   state = {
     allFilms:[],
-    randomData:'Get a random Star Wars film opening!'
+    randomData:'Get random Star Wars film opening!'
   };
 
   async componentDidMount() {
