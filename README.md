@@ -1,9 +1,7 @@
 <p align="center">
     <img src="https://www.aaddpa.org/ckfinder/userfiles/files/starwars.png" alt=""/>
 </p>
-
 <h1 align="center">Star Wars API</h1>
-
 <div>
     <p align="center">
         <img 
@@ -95,6 +93,6 @@ npm install
 <h3 align="center">
 Released in 2022.
 
-Made with 💖 by [Dandaro](https://github.com/rhayssadandara) 🚀.
+Made with 💖 by Dan 🚀.
 
 </h3>
