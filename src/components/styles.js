@@ -3,10 +3,6 @@ import Font from "../fonts/SfDistantGalaxy.ttf"
 
 
 export const HomeContainer = styled.div`
-    @font-face {
-      font-family: "Distant Galaxy";
-      src: url(${Font}) format("truetype")
-    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,15 +10,19 @@ export const HomeContainer = styled.div`
     height: 70vh;
     
     img{
-      height: 30vh;
-      margin-bottom: 3vh;
+        height: 30vh;
+        margin-bottom: 3vh;
     }
     h2{
-      font-size: 2.5rem;
-      font-family: "Distant Galaxy";
-      text-align: center;
+        font-size: 2.5rem;
+        font-family: "Distant Galaxy";
+        text-align: center;
     }
-`
+    @font-face {
+      font-family: "Distant Galaxy";
+      src: url(${Font}) format("truetype")
+    }
+    `
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -31,15 +31,15 @@ export const GlobalStyle = createGlobalStyle`
         src: url(${Font}) format("truetype")
     }
     
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    color: white;
-    transition:all ease-in-out 1s;
-}
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        transition:all ease-in-out 1s;
+    }
 `
 export const Container= styled.div`
     display: flex;
@@ -59,6 +59,22 @@ export const Card = styled.div`
     height: 50vh;
     text-align: center;
     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+    p{
+        color: #FFE919;
+        font-size: 1.6rem;
+        font-family: 'Archivo Black', sans-serif;
+        text-align: justify;
+
+        @media (max-width:900px) {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 2.5rem;
+        font-family: "Distant Galaxy";
+    }
     @keyframes scale-up-center {
     0% {
         -webkit-transform: scale(0.5);
@@ -69,24 +85,9 @@ export const Card = styled.div`
                 transform: scale(1);
     }
     }
-
-    p{
-        color: #FFE919;
-        font-size: 1.6rem;
-        font-family: 'Archivo Black', sans-serif;
-        text-align: justify;
-    }
-    h2{
-        font-size: 2.5rem;
-        font-family: "Distant Galaxy";
-    }
     @media (max-width:900px) {
         width:95%;
         height: 60vh;
-        p{
-            font-size: 1.2rem;
-            text-align: center;
-        }
     }
     
 `
@@ -95,7 +96,6 @@ export const Title = styled.h2`
 `
 export const Button= styled.button`
     padding: 15px 50px;
-    background-color: transparent;
     border: solid 3px white;
     border-radius: 5%;
     font-size: 1rem;
@@ -103,6 +103,7 @@ export const Button= styled.button`
     color:#FFE919;
     background-color: rgba(0,0,0, 0.8);
     cursor:pointer;
+    
     &:active{
         animation: rotate-center ease-in-out both 0.35s;
         @keyframes rotate-center {

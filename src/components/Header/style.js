@@ -17,6 +17,7 @@ body{
     background-size: cover;
     background-color: black;
     background-blend-mode: hard-light;
+
     input[type="checkbox"]{
     display: none;
     }
@@ -31,8 +32,8 @@ export const Navigation = styled.nav`
     justify-content: center;
     width: 100%;
     height: 10vh;
-    background-color: rgba(0,0,0, 0.7);
     border-bottom: 1px solid rgba(255,255,255, 0.3);
+    background-color: rgba(0,0,0, 0.7);
     `
 export const Container = styled.ul`
     display: flex;
@@ -40,18 +41,20 @@ export const Container = styled.ul`
     justify-content: space-evenly;
     width: 70%;
     height: 15vh;
+    
     @media (max-width: 900px) {
-        display: none;
-        
+        display: none;    
     }
 `
 export const StyledLink = styled(Link)`
     font-size: 1.3rem;
     font-family: 'Encode Sans', sans-serif;
+
     &:hover{
         cursor: pointer;
         color:#FFE919;
     }
+
     @media (max-width:900px){
         font-size: 2rem;
         font-family: "Distant Galaxy";
@@ -64,27 +67,29 @@ export const StyledLink = styled(Link)`
 
 export const Menu = styled.div`
 display: none;
-width: 100%;
 align-items: center;
 justify-content: center;
+width: 100%;
 background-color: black;
+
 @media (max-width: 900px){
     display: flex;
 }
 `
 export const Nav = styled.nav`
-width:400px;
 position:absolute;
 top:-900px;
-transition: all 0.5s;
 padding: 20px;
-background-color: black;
 z-index: 999;
+width:400px;
+background-color: black;
+
+transition: all 0.5s;
 `
 export const Label = styled.label`
-    padding:0.1vw;
     position: absolute;
     z-index: 1;
+    padding:0.1vw;
 `
 export const ContainerMobile = styled.ul`
     display: flex;
