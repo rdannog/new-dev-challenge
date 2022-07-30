@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import * as S from "./style"
+import MobileNav from './mobileNav';
 
 export default class Header extends React.Component {
   render() {
@@ -15,6 +16,7 @@ export default class Header extends React.Component {
           <link rel="icon" type="image/x-icon" href="https://www.pngkey.com/png/detail/36-364173_free-icons-png-star-wars-logo-png.png"/>
         </Helmet>        
         <S.GlobalStyle/>
+        <MobileNav/>
         <S.Container>
             <S.StyledLink to="/">
                 Home

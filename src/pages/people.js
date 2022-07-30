@@ -24,7 +24,7 @@ const People = () => {
   const handleClick = () => {
     const allPeople = peopleList.map((people, i)=>(
       <S.Card key={i}>
-      <p>{people.name} was born on year {people.birth_year} and has {people.hair_color} hair color</p>
+      <p style={{textAlign:"center"}}>{people.name} was born on year {people.birth_year} and has {people.hair_color} hair color</p>
     </S.Card>
     ))
     setRandomPeople(allPeople[randomIndex(0, allPeople.length)])

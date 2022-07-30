@@ -20,6 +20,7 @@ export const HomeContainer = styled.div`
     h2{
       font-size: 2.5rem;
       font-family: "Distant Galaxy";
+      text-align: center;
     }
 `
 
@@ -79,6 +80,14 @@ export const Card = styled.div`
         font-size: 2.5rem;
         font-family: "Distant Galaxy";
     }
+    @media (max-width:900px) {
+        width:95%;
+        height: 60vh;
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
     
 `
 export const Title = styled.h2`
@@ -95,7 +104,7 @@ export const Button= styled.button`
     background-color: rgba(0,0,0, 0.8);
     cursor:pointer;
     &:active{
-        animation: rotate-center 0.3s ease-in-out both;
+        animation: rotate-center ease-in-out both 0.35s;
         @keyframes rotate-center {
         0% {
             -webkit-transform: rotate(0);

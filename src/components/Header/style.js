@@ -1,4 +1,5 @@
 import styled, {createGlobalStyle} from "styled-components";
+import Font from "../../fonts/SfDistantGalaxy.ttf"
 import {Link} from "gatsby"
 
 
@@ -16,6 +17,12 @@ body{
     background-size: cover;
     background-color: black;
     background-blend-mode: hard-light;
+    input[type="checkbox"]{
+    display: none;
+    }
+    input[type="checkbox"]:checked ~ nav{
+    transform: translateY(990px);
+    }
 }
 `
 export const Navigation = styled.nav`
@@ -33,6 +40,10 @@ export const Container = styled.ul`
     justify-content: space-evenly;
     width: 70%;
     height: 15vh;
+    @media (max-width: 900px) {
+        display: none;
+        
+    }
 `
 export const StyledLink = styled(Link)`
     font-size: 1.3rem;
@@ -41,4 +52,44 @@ export const StyledLink = styled(Link)`
         cursor: pointer;
         color:#FFE919;
     }
+    @media (max-width:900px){
+        font-size: 2rem;
+        font-family: "Distant Galaxy";
+        @font-face {
+        font-family: "Distant Galaxy";
+        src: url(${Font}) format("truetype")
+    }
+    }
+`
+
+export const Menu = styled.div`
+display: none;
+width: 100%;
+align-items: center;
+justify-content: center;
+background-color: black;
+@media (max-width: 900px){
+    display: flex;
+}
+`
+export const Nav = styled.nav`
+width:400px;
+position:absolute;
+top:-900px;
+transition: all 0.5s;
+padding: 20px;
+background-color: black;
+z-index: 999;
+`
+export const Label = styled.label`
+    padding:0.1vw;
+    position: absolute;
+    z-index: 1;
+`
+export const ContainerMobile = styled.ul`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
 `

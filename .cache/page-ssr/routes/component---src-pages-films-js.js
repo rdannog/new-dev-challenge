@@ -6047,11 +6047,56 @@ __webpack_require__.r(__webpack_exports__);
 
 class Header extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Navigation, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Star Wars Api"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("style", null, "@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Navigation, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Star Wars Api"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("style", null, "@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
       rel: "icon",
       type: "image/x-icon",
       href: "https://www.pngkey.com/png/detail/36-364173_free-icons-png-star-wars-logo-png.png"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.GlobalStyle, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Menu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+      type: "checkbox",
+      id: "check"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Label, {
+      for: "check"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "32",
+      height: "32",
+      viewBox: "0 0 172 172",
+      style: {
+        cursor: "pointer"
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("g", {
+      fill: "none",
+      "fill-rule": "nonzero",
+      stroke: "none",
+      "stroke-width": "1",
+      "stroke-linecap": "butt",
+      "stroke-linejoin": "miter",
+      "stroke-miterlimit": "10",
+      "stroke-dasharray": "",
+      "stroke-dashoffset": "0",
+      "font-family": "none",
+      "font-weight": "none",
+      "font-size": "none",
+      "text-anchor": "none",
+      style: {
+        mixBlendMode: "normal"
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+      d: "M0,172v-172h172v172z",
+      fill: "none"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("g", {
+      fill: "#0C2A78"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+      d: "M14.33333,35.83333v14.33333h143.33333v-14.33333zM14.33333,78.83333v14.33333h143.33333v-14.33333zM14.33333,121.83333v14.33333h143.33333v-14.33333z"
+    }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: "#"
+    }, "link 1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: "#"
+    }, "link 2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: "#"
+    }, "link 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: "#"
+    }, "link 4"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/"
     }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_style__WEBPACK_IMPORTED_MODULE_2__.StyledLink, {
       to: "/films"
@@ -6083,6 +6128,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Container": () => (/* binding */ Container),
 /* harmony export */   "GlobalStyle": () => (/* binding */ GlobalStyle),
+/* harmony export */   "Label": () => (/* binding */ Label),
+/* harmony export */   "Menu": () => (/* binding */ Menu),
+/* harmony export */   "Nav": () => (/* binding */ Nav),
 /* harmony export */   "Navigation": () => (/* binding */ Navigation),
 /* harmony export */   "StyledLink": () => (/* binding */ StyledLink)
 /* harmony export */ });
@@ -6090,16 +6138,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
-const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-image:url('https://wallpaperaccess.com/full/2151901.jpg');background-size:cover;background-color:black;background-blend-mode:hard-light;}"]);
+const GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["*{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;color:white;}body{background-image:url('https://wallpaperaccess.com/full/2151901.jpg');background-size:cover;background-color:black;background-blend-mode:hard-light;input[type=\"checkbox\"]{display:none;}input[type=\"checkbox\"]:checked ~ nav{transform:translateX(200px);}}"]);
 const Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "style__Navigation"
-})(["display:flex;align-items:center;justify-content:center;width:100%;height:10vh;background-color:rgba(0,0,0,0.7);border-bottom:1px solid white;"]);
+})(["display:flex;align-items:center;justify-content:center;width:100%;height:10vh;background-color:rgba(0,0,0,0.7);border-bottom:1px solid rgba(255,255,255,0.3);"]);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "style__Container"
-})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;"]);
+})(["display:flex;align-items:center;justify-content:space-evenly;width:70%;height:15vh;@media (max-width:600px){display:none;}"]);
 const StyledLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link).withConfig({
   displayName: "style__StyledLink"
-})(["font-size:1.3rem;&:hover{cursor:pointer;color:#FFE919;}"]);
+})(["font-size:1.3rem;font-family:'Encode Sans',sans-serif;&:hover{cursor:pointer;color:#FFE919;}"]);
+const Menu = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "style__Menu"
+})(["display:none;margin-bottom:4vh;margin-left:3vw;@media (max-width:600px){display:block;}"]);
+const Nav = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
+  displayName: "style__Nav"
+})(["width:200px;position:absolute;left:-200px;transition:all 0.5s;ul{position:absolute;top:8vh;width:100%;}a{height:30px;display:flex;align-items:center;text-align:center;padding-left:20px;color:white;text-transform:capitalize;background-color:#0C2A78;&:hover{background-color:#3f5faf;color:gold;}}"]);
+const Label = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label.withConfig({
+  displayName: "style__Label"
+})(["padding:0.1vw;position:absolute;z-index:1;img{width:5vw;}"]);
 
 /***/ }),
 
@@ -6132,13 +6189,13 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
 })(["display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:8vh;"]);
 const Card = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "styles__Card"
-})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;animation:scale-up-center 0.4s cubic-bezier(0.390,0.575,0.565,1.000) both;@keyframes scale-up-center{0%{-webkit-transform:scale(0.5);transform:scale(0.5);}100%{-webkit-transform:scale(1);transform:scale(1);}}p{color:#FFE919;font-size:1.6rem;font-family:'Anton',sans-serif;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"]);
+})(["display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:6vh 2vw;margin:16px;width:50vw;height:50vh;text-align:center;animation:scale-up-center 0.4s cubic-bezier(0.390,0.575,0.565,1.000) both;@keyframes scale-up-center{0%{-webkit-transform:scale(0.5);transform:scale(0.5);}100%{-webkit-transform:scale(1);transform:scale(1);}}p{color:#FFE919;font-size:1.6rem;font-family:'Archivo Black',sans-serif;text-align:justify;}h2{font-size:2.5rem;font-family:\"Distant Galaxy\";}"]);
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2.withConfig({
   displayName: "styles__Title"
 })(["margin-bottom:7vh;"]);
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "styles__Button"
-})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;color:#FFE919;background-color:rgba(0,0,0,0.8);cursor:pointer;&:active{animation:rotate-center 0.3s ease-in-out both;@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}}"]);
+})(["padding:15px 50px;background-color:transparent;border:solid 3px white;border-radius:5%;font-size:1rem;font-family:'Archivo Black',sans-serif;color:#FFE919;background-color:rgba(0,0,0,0.8);cursor:pointer;&:active{animation:rotate-center ease-in-out both 0.35s;@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}}"]);
 
 /***/ }),
 
@@ -6187,7 +6244,9 @@ const Films = () => {
   };
 
   const handleClick = () => {
-    const filmsList = allFilms.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Title, null, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.opening_crawl)));
+    const filmsList = allFilms.map((item, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Card, {
+      key: i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_3__.Title, null, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.opening_crawl)));
     setRandomData(filmsList[randomIndex(0, filmsList.length)]);
   };
 
