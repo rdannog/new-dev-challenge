@@ -2,6 +2,31 @@ import styled, {createGlobalStyle} from "styled-components";
 import Font from "../fonts/SfDistantGalaxy.ttf"
 
 
+export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: "Distant Galaxy";
+        src: url(${Font}) format("truetype")
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        transition:all ease-in-out 1s;
+    }
+`
+
+export const Container= styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+`
+
 export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -22,32 +47,8 @@ export const HomeContainer = styled.div`
       font-family: "Distant Galaxy";
       src: url(${Font}) format("truetype")
     }
-    `
-
-
-export const GlobalStyle = createGlobalStyle`
-    @font-face {
-        font-family: "Distant Galaxy";
-        src: url(${Font}) format("truetype")
-    }
-    
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
-        color: white;
-        transition:all ease-in-out 1s;
-    }
 `
-export const Container= styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8vh;
-`
+
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
@@ -103,7 +104,7 @@ export const Button= styled.button`
     color:#FFE919;
     background-color: rgba(0,0,0, 0.8);
     cursor:pointer;
-    
+
     &:active{
         animation: rotate-center ease-in-out both 0.35s;
         @keyframes rotate-center {
